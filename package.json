@@ -1,0 +1,38 @@
+{
+  "name": "skeletor",
+  "description": "SPA skeleton",
+  "main": "index.html",
+  "scripts": {
+    "dev": "./node_modules/gulp/bin/gulp.js",
+    "sync": "./node_modules/gulp/bin/gulp.js sync",
+    "vendor": "./node_modules/gulp/bin/gulp.js sync",
+    "prod": "./node_modules/gulp/bin/gulp.js prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/acidjazz/fullsun.git"
+  },
+  "author": "Kevin Olson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acidjazz/fullsun/issues"
+  },
+  "homepage": "https://github.com/acidjazz/fullsun#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-coffee": "^2.3.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-pug": "^3.1.0",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "jquery": "^3.1.1",
+    "objectus": "^1.1.1"
+  }
+}

@@ -1,0 +1,14 @@
+vendor-prefixes ?= webkit moz o ms official
+
+@import '/includes/mixins'
+@import '/includes/*'
+@import guide
+
+.clear
+  clearfix()
+
+body
+  padding 0
+  margin 0
+  background-color gc(white1)
+  gf(copy1)

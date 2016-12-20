@@ -1,0 +1,13 @@
+
+# general
+.DS_Store
+
+# structure / vim
+*.swp
+
+# Dependency directory
+node_modules
+
+# php
+composer.lock
+/vendor
