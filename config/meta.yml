@@ -1,8 +1,8 @@
 ---
-url: http://skeletal/
+url: http://staging.lookingglass.com/
 title: Looking Glass VR
-description: Windows to the past are open at last!
+description: Windows to the past are open at last
 keywords: VR, VR app, looking glass
-tracking_id: 31337
+tracking_id: UA-89300822-1
 share: images/share.jpg
-repo: https://github.com/acidjazz/lookingglass
+repo: https://github.com/lookingglassvr/lookingglass

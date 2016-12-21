@@ -94,8 +94,40 @@
       height 468px
       background-image url(/images/globe.png)
 
+@media all and (min-width: 1px) and (max-width: 1000px)
+  header
+    > .inner
+      padding 10px
+  .container
+    width auto
+    padding 0 10px
 
+  .menu
+    > .inner
+      > .item
+        display none
+      > .divider
+        display none
+      > .left
+        border-right none
+      > .right
+        float right
 
+  .section
+    > .copy
+      width auto !important
+      &.left
+        float none
+      &.right
+        float none
+      > .subheader
+        > .copy
+          line-height 50px
 
-
+    > .asset
+      margin 20px 0
+      &.left
+        float none
+      &.right
+        float none
 
