@@ -18,10 +18,14 @@ npm install
 `npm run sync`
 
 ### staging deployment
-`npm run dev`
-`./operations/ghpage.sh`
+```bash
+npm run dev
+./operations/ghpage.sh
+```
 
 ### production deployment
-`npm run prod`
-`./operations/deploy.sh`
+```bash
+npm run prod
+./operations/deploy.sh
+```
 
