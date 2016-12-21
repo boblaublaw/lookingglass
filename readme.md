@@ -17,18 +17,11 @@ npm install
 ### local environment
 `npm run sync`
 
-### development environment
-`npm run sync`
-
-### development compilation
-`npm run dev`
-
-### production compilation
-`npm run prod`
-
 ### staging deployment
+`npm run dev`
 `./operations/ghpage.sh`
 
 ### production deployment
+`npm run prod`
 `./operations/deploy.sh`
 
