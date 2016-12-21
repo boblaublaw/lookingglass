@@ -20,6 +20,7 @@
   "homepage": "https://github.com/acidjazz/fullsun#readme",
   "dependencies": {
     "browser-sync": "^2.18.1",
+    "coffee-script": "^1.12.2",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.13",
     "gulp-coffee": "^2.3.3",
