@@ -26,7 +26,7 @@ block content
     .asset.right.scope1
     .copy.left.scope1
       .first=config.copy.intro.first
-      | #{config.copy.intro.copy}
+      | !{config.copy.intro.copy}
 
   .clear
   .section.section_history
@@ -38,12 +38,12 @@ block content
         .copy=config.copy.history.title
         .border
           include ../vector/border.svg
-      | #{config.copy.history.copy1}
+      | !{config.copy.history.copy1}
 
     .clear
     .copy.full
       .first=config.copy.history.first
-      | #{config.copy.history.copy2}
+      | !{config.copy.history.copy2}
 
 
 
@@ -58,6 +58,6 @@ block content
           include ../vector/border.svg
 
       .first=config.copy.collection.first
-      | #{config.copy.collection.copy}
+      | !{config.copy.collection.copy}
     .asset.right.globe
 
