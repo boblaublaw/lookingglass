@@ -76,3 +76,26 @@ block content
     .asset.left.howto
     .clear
   .clear
+
+  .clear
+  .section.section_credits
+    .copy.left.credits
+      .subheader
+        .border
+          include ../vector/border.svg
+        .copy=config.copy.credits.title
+        .border
+          include ../vector/border.svg
+      .first=config.copy.credits.first
+      | !{config.copy.credits.copy}
+    .authors.right.credits
+      .title=config.copy.credits.authors.title
+      .authorlist
+        .author.author_joeb
+          .asset
+          .name=config.copy.credits.authors.joeb
+        .author.author_kevinc
+          .asset
+          .name=config.copy.credits.authors.kevinc
+    .clear
+  .clear

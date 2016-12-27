@@ -80,7 +80,35 @@
         list-style-type decimal
         margin 0
         padding 0 0 20px 25px
+    &.credits
+      width 550px
 
+  > .authors
+    float right
+    width 360px
+    > .title
+      gf(copy1)
+      text-transform none
+      padding 0
+
+    > .authorlist
+      > .author
+        float left
+        width 180px
+        > .asset
+          background-size contain
+          background-repeat no-repeat
+          height 220px
+        &.author_joeb > .asset
+          background-image url(/images/joeb.png)
+          margin 0 5px 0 0 
+        &.author_kevinc > .asset
+          background-image url(/images/kevinc.png)
+          margin 0 0 0 5px
+        > .name
+          text-align center
+
+    
   > .asset
     background-size cover
     &.right
