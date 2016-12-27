@@ -45,8 +45,6 @@ block content
       .first=config.copy.history.first
       | !{config.copy.history.copy2}
 
-
-
   .clear
   .section.section_collection
     .copy.left.collection
@@ -61,3 +59,20 @@ block content
       | !{config.copy.collection.copy}
     .asset.right.globe
 
+  .clear
+  .section.section_howto
+    .copy.right.howto
+      .subheader
+        .border
+          include ../vector/border.svg
+        .copy=config.copy.howto.title
+        .border
+          include ../vector/border.svg
+
+      ul
+        each instruction in config.copy.howto.instructions
+          li !{instruction}
+      .extra=config.copy.howto.extra
+    .asset.left.howto
+    .clear
+  .clear
