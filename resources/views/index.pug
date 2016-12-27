@@ -66,7 +66,7 @@ block content
       ul
         each instruction in config.copy.howto.instructions
           li !{instruction}
-      .extra=config.copy.howto.extra
+      .extra !{config.copy.howto.extra}
     .asset.left.howto
     .clear
   .clear
@@ -87,9 +87,9 @@ block content
       .authorlist
         .author.author_joeb
           .asset
-          .name=config.copy.credits.authors.joeb
+          .name !{config.copy.credits.authors.joeb}
         .author.author_kevinc
           .asset
-          .name=config.copy.credits.authors.kevinc
+          .name !{config.copy.credits.authors.kevinc}
     .clear
   .clear
