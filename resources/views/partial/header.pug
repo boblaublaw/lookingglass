@@ -10,11 +10,20 @@ header#top
             .line
             .line
             .line
-          .left SF, CA
+          .left            
+            .loc.on SF, CA
+            a.lg.off(href="#top",data-item="top")
+              include ../../vector/lg.svg
+
 
           include menu.pug
 
-          .right 2016
+          .right
+            .socials
+              a.social.social_facebook(href=config.meta.social.facebook)
+                include ../../vector/facebook.svg
+              a.social.social_twitter(href=config.meta.social.twitter)
+                include ../../vector/twitter.svg
           .clear
         .clear
 

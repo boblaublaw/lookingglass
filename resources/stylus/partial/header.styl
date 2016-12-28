@@ -37,12 +37,44 @@ header
           > .left
             float left
             border-right 1px solid gc(black1)
+            height 35px
+            > .loc
+              margin 3px 0 0 0
+              onoff()
+            > .lg
+              onoff()
+              float right
+              animation scaleInB 0.5s ease-in-out both
+              > svg
+                width 35px
+                height 35px
           > .right
             float right
             border-left 1px solid gc(black1)
+            > .socials
+              > .social
+                float left
+                width 25px 
+                height 25px 
+                background-color gc(black2)
+                padding 5px
+                transition background-color 0.1s linear 0.1s
+                border-radius 50%
+                &:nth-child(2)
+                  margin-left 10px
+                &:hover
+                  background-color gc(brown3)
+                  transition background-color 0.1s linear 0s
+
+                > svg
+                  width 15px
+                  height 15px
+                  margin 0 1px 4px 0
+                  > path
+                    fill gc(beige2)
           > .item
             float left
-            padding 10px 30px
+            padding 12px 30px
             color gc(black1)
             text-decoration none
             transition color 0.1s linear, text-decoration 0.1s linear 0.1s
@@ -54,7 +86,7 @@ header
             width 2px
             height 20px
             background-color gc(black1)
-            margin 16px 0 0 0
+            margin 20px 0 0 0
 
 
 

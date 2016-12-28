@@ -15,9 +15,13 @@ Delay =
 
     if st > Delay.top and Delay.stuck is false
       $('header > .inner > .menu').addClass('stuck').removeClass 'unstuck'
+      _.on 'header > .inner > .menu > .outer > .inner > .left > .lg'
+      _.off 'header > .inner > .menu > .outer > .inner > .left > .loc'
       Delay.stuck = true
 
     if st < Delay.top and Delay.stuck is true
       $('header > .inner > .menu').addClass('unstuck').removeClass 'stuck'
+      _.off 'header > .inner > .menu > .outer > .inner > .left > .lg'
+      _.on 'header > .inner > .menu > .outer > .inner > .left > .loc'
       Delay.stuck = false
 
