@@ -9,6 +9,55 @@ header
         width inherit
         height inherit
 
+    > .menu
+      &.unstuck
+        position absolute
+      &.stuck
+        position fixed
+        top 0px
+      border-top 2px solid gc(black1)
+      border-bottom 2px solid gc(black1)
+      padding 6px 0
+      background-image url(/images/pattern/paper.png)
+      top 200px
+      left 0px
+      right 0px
+      width 100%
+      > .outer
+        border-top 1px solid gc(black1)
+        border-bottom 1px solid gc(black1)
+        > .inner
+          width 980px
+          margin auto
+          > .left, > .right, > .item
+            text-align center
+            padding 10px
+          > .left, > .right
+            width 100px
+          > .left
+            float left
+            border-right 1px solid gc(black1)
+          > .right
+            float right
+            border-left 1px solid gc(black1)
+          > .item
+            float left
+            padding 10px 30px
+            color gc(black1)
+            text-decoration none
+            transition color 0.1s linear, text-decoration 0.1s linear 0.1s
+            &:hover
+              color gc(brown3)
+              text-decoration underline
+          > .divider
+            float left
+            width 2px
+            height 20px
+            background-color gc(black1)
+            margin 16px 0 0 0
+
+
+
 #Ornaments
   animation fadeIn 2s ease-in-out 0s both
 

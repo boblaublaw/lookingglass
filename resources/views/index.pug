@@ -2,28 +2,16 @@ extends extend/layout.pug
 block content
   .title=config.meta.description
 
-  .menu
-    .inner
-      .burger
-        .line
-        .line
-        .line
-      .left SF, CA
+  .fakemenu
 
-      include partial/menu.pug
-
-      .right 2016
-      .clear
-    .clear
-
-  .section.section_intro
+  .section.section_intro#intro
     .asset.right.scope1
     .copy.left.scope1
       .first=config.copy.intro.first
       | !{config.copy.intro.copy}
 
   .clear
-  .section.section_history
+  .section.section_history#history
     .asset.left.brewster
     .copy.right.history1
       .subheader
@@ -40,7 +28,7 @@ block content
       | !{config.copy.history.copy2}
 
   .clear
-  .section.section_collection
+  .section.section_collection#collection
     .copy.left.collection
       .subheader
         .border
@@ -54,7 +42,7 @@ block content
     .asset.right.globe
 
   .clear
-  .section.section_howto
+  .section.section_howto#howto
     .copy.right.howto
       .subheader
         .border
@@ -72,7 +60,7 @@ block content
   .clear
 
   .clear
-  .section.section_credits
+  .section.section_credits#credits
     .copy.left.credits
       .subheader
         .border
@@ -93,3 +81,6 @@ block content
           .name !{config.copy.credits.authors.kevinc}
     .clear
   .clear
+
+  script.
+    Index.i();

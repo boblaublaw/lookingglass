@@ -79,7 +79,7 @@ limitations under the License.
     </script>
   </head>
   <body>
-    <header>
+    <header id="top">
       <div class="inner">
         <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 695.98 222.62">
   <title>header</title>
@@ -160,36 +160,39 @@ limitations under the License.
 </svg>
 
         </div>
+        <div class="menu unstuck">
+          <div class="outer">
+            <div class="inner">
+              <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+              <div class="left">SF, CA</div><a class="item" href="#intro" data-item="intro">Intro</a>
+              <div class="divider"></div><a class="item" href="#history" data-item="history">History</a>
+              <div class="divider"></div><a class="item" href="#collection" data-item="collection">The Collection</a>
+              <div class="divider"></div><a class="item" href="#howto" data-item="howto">How to Use</a>
+              <div class="divider"></div><a class="item" href="#credits" data-item="credits">Credits</a>
+              <div class="right">2016</div>
+              <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
       </div>
     </header>
     <div class="container">
       <div class="inner">
         <div class="title">Windows to the past are open at last</div>
-        <div class="menu">
-          <div class="inner">
-            <div class="burger">
-              <div class="line"></div>
-              <div class="line"></div>
-              <div class="line"></div>
-            </div>
-            <div class="left">SF, CA</div><a class="item" href="#intro">Intro</a>
-            <div class="divider"></div><a class="item" href="#history">History</a>
-            <div class="divider"></div><a class="item" href="#howtouse">How to Use</a>
-            <div class="divider"></div><a class="item" href="#thecollection">The Collection</a>
-            <div class="divider"></div><a class="item" href="#credits">Credits</a>
-            <div class="right">2016</div>
-            <div class="clear"></div>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="section section_intro">
+        <div class="fakemenu"></div>
+        <div class="section section_intro" id="intro">
           <div class="asset right scope1"></div>
           <div class="copy left scope1">
             <div class="first">W</div>elcome to Looking Glass VR. Looking Glass VR is a mobile application for <a target="_blank" href="https://vr.google.com/cardboard/">Google Cardboard</a> which brings historic stereographic 3D photos from yesteryear into focus. You can find <a target="_blank" href="https://play.google.com/store/apps/details?id=photos.stereographic.cardboard">Looking Glass VR in the Google Play Store</a>, but to get the 3D effect  you will need to <a target="_blank" href="https://vr.google.com/cardboard/get-cardboard/">get a Google Cardboard VR device</a>. (Be sure to get one with a trigger!)
           </div>
         </div>
         <div class="clear"></div>
-        <div class="section section_history">
+        <div class="section section_history" id="history">
           <div class="asset left brewster"></div>
           <div class="copy right history1">
             <div class="subheader">
@@ -230,7 +233,7 @@ limitations under the License.
           </div>
         </div>
         <div class="clear"></div>
-        <div class="section section_collection">
+        <div class="section section_collection" id="collection">
           <div class="copy left collection">
             <div class="subheader">
               <div class="border"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615.99 10.32">
@@ -268,7 +271,7 @@ limitations under the License.
           <div class="asset right globe"></div>
         </div>
         <div class="clear"></div>
-        <div class="section section_howto">
+        <div class="section section_howto" id="howto">
           <div class="copy right howto">
             <div class="subheader">
               <div class="border"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615.99 10.32">
@@ -314,7 +317,7 @@ limitations under the License.
         </div>
         <div class="clear"></div>
         <div class="clear"></div>
-        <div class="section section_credits">
+        <div class="section section_credits" id="credits">
           <div class="copy left credits">
             <div class="subheader">
               <div class="border"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 615.99 10.32">
@@ -365,6 +368,7 @@ limitations under the License.
           <div class="clear"></div>
         </div>
         <div class="clear"></div>
+        <script>Index.i();</script>
       </div>
     </div>
     <footer>
@@ -377,11 +381,11 @@ limitations under the License.
 </svg>
 
         </div>
-        <div class="fmenu"><a class="item" href="#intro">Intro</a>
-          <div class="divider"></div><a class="item" href="#history">History</a>
-          <div class="divider"></div><a class="item" href="#howtouse">How to Use</a>
-          <div class="divider"></div><a class="item" href="#thecollection">The Collection</a>
-          <div class="divider"></div><a class="item" href="#credits">Credits</a>
+        <div class="fmenu"><a class="item" href="#intro" data-item="intro">Intro</a>
+          <div class="divider"></div><a class="item" href="#history" data-item="history">History</a>
+          <div class="divider"></div><a class="item" href="#collection" data-item="collection">The Collection</a>
+          <div class="divider"></div><a class="item" href="#howto" data-item="howto">How to Use</a>
+          <div class="divider"></div><a class="item" href="#credits" data-item="credits">Credits</a>
           <div class="clear"></div>
         </div>
         <div class="clear"></div>
