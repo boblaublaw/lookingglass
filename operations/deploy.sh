@@ -1,4 +1,4 @@
 #!/bin/bash
 
-s3cmd --config=~/.s3LGfullaccess sync public/ s3://lookingglassvr --exclude '.DS_Store'
-s3cmd setacl --config=~/.s3LGfullaccess s3://lookingglassvr/ --acl-public --recursive
+s3cmd --config=${HOME}/.s3LGfullaccess --exclude '.DS_Store' sync public/ s3://lookingglassvr/
+s3cmd setacl --config=${HOME}/.s3LGfullaccess --acl-public --recursive s3://lookingglassvr/
