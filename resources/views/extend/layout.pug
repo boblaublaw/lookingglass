@@ -56,9 +56,27 @@ html(lang='en')
     script(type='application/ld+json').
       {
         "@context": "http://schema.org",
-        "@type": "Organization",
-        "url": "#{config.meta.url}",
-        "logo": "#{config.meta.url}#{config.meta.share}"
+        "@type": "MobileApplication",
+         "description": "Looking Glass VR is a mobile VR stereoscopic photo viewer application.",
+         "installUrl": "https://play.google.com/store/apps/details?id=photos.stereographic.cardboard",
+         "sameAs": "http://www.lookingglassvr.com",
+         "isBasedOn": "http://www.lib.utexas.edu/taro/utcah/02182/cah-02182.html",
+         "about": "3D Historical Photographs",
+         "genre": "VR",
+         "url": "http://lookingglassvr.com",
+         "typicalAgeRange": "10-",
+         "keywords": "VR, Mobile VR, Stereoscopy, Stereoviews, Stereograms, Stereographs, Stereocards, Keystone, Keystone Company View, Keystone Tour of the World, Tour of the World, Google Cardboard, Google VR",
+         "alternateName": "Looking Glass",
+         "applicationSubCategory": "Mobile VR",
+         "timeRequired": "P20M",
+         "softwareHelp": "http://lookingglassvr.com/#howto",
+         "name": "Looking Glass VR",
+         "discussionUrl": "https://www.facebook.com/Looking-Glass-VR-178294259284296/",
+         "headline": "Windows to the past are open at last!",
+         "isFamilyFriendly": true,
+         "applicationCategory": "VR",
+         "operatingSystem": "Android",
+         "logo": "#{config.meta.url}#{config.meta.share}"
       }
     //- facebook
     meta(property='og:url',content=config.meta.url)
