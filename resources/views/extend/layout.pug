@@ -76,7 +76,16 @@ html(lang='en')
          "isFamilyFriendly": true,
          "applicationCategory": "VR",
          "operatingSystem": "Android",
-         "logo": "#{config.meta.url}#{config.meta.share}"
+         "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "10",
+            "reviewCount": "250"
+          },
+          "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "$0",
+            "offerCount": "999999"
+          }
       }
     //- facebook
     meta(property='og:url',content=config.meta.url)
