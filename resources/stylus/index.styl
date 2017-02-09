@@ -13,6 +13,8 @@
 
 .section
   padding 30px 0
+  &.section_authors
+    padding  0
   > .copy
 
     &.left
@@ -50,32 +52,39 @@
         margin 0
         padding 0 0 20px 25px
     &.credits
-      width 550px
+      width 800px
+      margin auto
 
   > .authors
-    float right
-    width 360px
+    margin auto
+    width 860px
     > .title
       gf(copy1)
       text-transform none
-      padding 0
+      padding 0 0 20px 0
 
     > .authorlist
       > .author
         float left
-        width 180px
+        width 286px
         > .asset
           background-size contain
           background-repeat no-repeat
+          background-position 50% 50%
           height 220px
+          width 220px
+          margin auto
         &.author_joeb > .asset
           background-image url(/images/joeb.png)
-          margin 0 5px 0 0 
         &.author_kevinc > .asset
           background-image url(/images/kevinc.png)
-          margin 0 0 0 5px
+        &.author_kevino > .asset
+          background-image url(/images/kevino.png)
         > .name
+          width 220px
+          margin auto
           text-align center
+          padding 10px 0 0 0
 
     
   > .asset
@@ -148,7 +157,14 @@
       padding 20px 0
       > .authorlist
         > .author
-          width 160px
+          width 300px
+          float none
+          margin auto
+          padding 10px 0
+          > .asset
+            width 300px
+            height 300px
+            margin auto
 
   footer
     > .inner
