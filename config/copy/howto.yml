@@ -1,9 +1,9 @@
 ---
 title: how to use looking glass vr
 instructions:
-  - Make sure you have a <a target="_blank" href="https://vr.google.com/cardboard/get-cardboard/">Google Cardboard headset</a>. (One with a trigger!)
-  - Install <a target="_blank" href="https://play.google.com/store/apps/details?id=photos.stereographic.cardboard">Looking Glass VR</a> from the Google Play Store.
-  - Turn on your WiFi & launch the application.
-  - Click your trigger on the stereoscope to get started.
-  - Additionally, you can <a href="http://youtu.be/XTc5z2nbjsI" target="_blank">watch this helpful tutorial video</a> which covers the basics of installation and using Looking Glass VR.
+    - Make sure you have a supporting headset, either <a target="_blank" href="http://www.samsung.com/global/galaxy/gear-vr/">Samsung Gear VR</a> or <a target="_blank" href="https://vr.google.com/cardboard/get-cardboard/">Google Cardboard headset</a>. (One with a trigger!)
+    - Install Looking Glass VR from either <a target="_blank" href="https://www.oculus.com/experiences/gear-vr/1107766839328808">Oculus Home (Gear VR)</a> or <a target="_blank" href="https://play.google.com/store/apps/details?id=photos.stereographic.cardboard">Google Play (Cardboard)</a>.
+    - Turn on your WiFi & launch the application.
+    - Let the application download more content, or just hit start to use what you have.
+    - Click your trigger on the stereoscope to get started.
 extra: If your Cardboard device does not have a trigger, you can use a <a target="_blank" href="https://www.amazon.com/SteelSeries-Stratus-Bluetooth-Wireless-Controller/dp/B015WKY3IM/ref=sr_1_1">bluetooth controller</a> to interact with the application.
