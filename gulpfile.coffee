@@ -1,4 +1,5 @@
 gulp         = require 'gulp'
+merge        = require 'merge-stream'
 sync         = require('browser-sync').create()
 notify       = require 'gulp-notify'
 coffee       = require 'gulp-coffee'
@@ -34,33 +35,33 @@ objectify()
 
 gulp.task 'objectus', objectify
 
-gulp.task 'goprod', ->
+gulp.task 'goprod', (done) ->
   env = 'prod'
+  done()
 
 gulp.task 'vendor', ->
-
-  gulp.src([
+  js = gulp.src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/jquery.scrollto/jquery.scrollTo.js',
     'node_modules/moment/min/moment.min.js',
   ])
+    .pipe(gulpif(env != 'dev',uglify()))
+    .pipe(concat('vendor.js'))
+    .pipe gulp.dest('public/javascript')
 
-  .pipe(gulpif(env != 'dev',uglify()))
-  .pipe(concat('vendor.js'))
-  .pipe gulp.dest('public/javascript')
-
-  gulp.src([
+  css = gulp.src([
     'node_modules/slick-carousel/slick/slick.css',
     'node_modules/slick-carousel/slick/slick-theme.css',
   ])
+    .pipe(gulpif(env != 'dev',clean()))
+    .pipe(concat('vendor.css'))
+    .pipe gulp.dest('public/css/')
 
-  .pipe(gulpif(env != 'dev',clean()))
-  .pipe(concat('vendor.css'))
-  .pipe gulp.dest('public/css/')
+  return merge(js, css)
 
 gulp.task 'coffee', ->
-  gulp.src(dirs.coffee + '/*.coffee')
+  return gulp.src(dirs.coffee + '/*.coffee')
     .pipe(gulpif(env == 'dev', sourcemaps.init(loadMaps: true)))
     .pipe(coffee(bare: true)
       .on('error', notify.onError((error) ->
@@ -74,9 +75,9 @@ gulp.task 'coffee', ->
     .pipe(gulp.dest('./public/javascript'))
     .pipe(sync.stream())
 
-gulp.task 'stylus', ->
+gulp.task 'stylus', (done) ->
   objectify ->
-    gulp.src(dirs.stylus + '/main.styl')
+    stream = gulp.src(dirs.stylus + '/main.styl')
       .pipe(gulpif(env == 'dev',sourcemaps.init(loadMaps: true)))
       .pipe(stylus(rawDefine: config: config)
       .on('error', notify.onError((error) ->
@@ -88,10 +89,11 @@ gulp.task 'stylus', ->
       .pipe(gulpif(env == 'dev',sourcemaps.write()))
       .pipe(gulp.dest('public/css'))
       .pipe(sync.stream())
+    stream.on 'end', done
 
-gulp.task 'pug', ->
+gulp.task 'pug', (done) ->
   objectify ->
-    gulp.src(dirs.pug + '/**/index.pug')
+    stream = gulp.src(dirs.pug + '/**/index.pug')
       .pipe(pug(
         pretty: true
         locals:
@@ -106,14 +108,15 @@ gulp.task 'pug', ->
       )))
       .pipe(gulp.dest('public'))
       .pipe sync.stream()
+    stream.on 'end', done
 
 watch = ->
-  gulp.watch 'config/**/*', ['objectus','pug','stylus']
-  gulp.watch [dirs.coffee + '/**/*.coffee','!' + dirs.coffee + '/config.coffee'], ['coffee']
-  gulp.watch dirs.stylus + '/**/*.styl', ['stylus']
-  gulp.watch dirs.pug + '/**/*.pug', ['pug']
-  gulp.watch dirs.svg + '/**/*.svg', ['pug']
-  gulp.watch 'public/images/**/*', ['pug']
+  gulp.watch 'config/**/*', gulp.series('objectus', gulp.parallel('pug', 'stylus'))
+  gulp.watch [dirs.coffee + '/**/*.coffee','!' + dirs.coffee + '/config.coffee'], gulp.series('coffee')
+  gulp.watch dirs.stylus + '/**/*.styl', gulp.series('stylus')
+  gulp.watch dirs.pug + '/**/*.pug', gulp.series('pug')
+  gulp.watch dirs.svg + '/**/*.svg', gulp.series('pug')
+  gulp.watch 'public/images/**/*', gulp.series('pug')
 
 gulp.task 'sync', ->
   sync.init
@@ -128,5 +131,5 @@ gulp.task 'sync', ->
   watch()
 
 gulp.task 'watch', watch
-gulp.task 'default', ['objectus','stylus','pug','vendor','coffee']
-gulp.task 'prod', ['goprod','default']
+gulp.task 'default', gulp.series('objectus', gulp.parallel('stylus', 'pug', 'vendor', 'coffee'))
+gulp.task 'prod', gulp.series('goprod', 'default')
